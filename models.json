@@ -1,0 +1,69 @@
+{
+  "checked": "2026-10-24",
+  "sources": ["https://docs.munito.ai/models", "https://docs.munito.ai/reasoning"],
+  "providers": {
+    "munito": { "name": "Munito AI", "baseUrl": "https://api.munito.ai/inference/v1" },
+    "munito-eu": { "name": "Munito AI (EU)", "baseUrl": "https://api.eu.munito.ai/inference/v1" }
+  },
+  "models": [
+    {
+      "id": "zai-org/glm-5.3-flash",
+      "name": "GLM-5.3-Flash",
+      "context": 1048576,
+      "maxOutput": 943718,
+      "input": ["text", "image"],
+      "efforts": ["low", "high", "max"],
+      "price": {
+        "munito": { "input": 0.13, "cachedInput": 0.027, "output": 0.45 },
+        "munito-eu": { "input": 0.15, "cachedInput": 0.03, "output": 0.5 }
+      }
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "context": 1048576,
+      "maxOutput": 943718,
+      "input": ["text"],
+      "efforts": ["low", "high", "max"],
+      "price": {
+        "munito": { "input": 0.099, "cachedInput": 0.019, "output": 0.25 },
+        "munito-eu": { "input": 0.11, "cachedInput": 0.022, "output": 0.28 }
+      }
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017 (preview)",
+      "context": 1048576,
+      "maxOutput": 943718,
+      "input": ["text", "image"],
+      "efforts": ["low", "high", "max"],
+      "price": {
+        "munito": { "input": 0.27, "cachedInput": 0.0054, "output": 1.0 }
+      }
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "Qwen3.8-27B",
+      "context": 262144,
+      "maxOutput": 235929,
+      "input": ["text", "image"],
+      "efforts": ["low", "medium", "xhigh"],
+      "price": {
+        "munito": { "input": 0.18, "cachedInput": 0.05, "output": 2.4 },
+        "munito-eu": { "input": 0.2, "cachedInput": 0.11, "output": 2.7 }
+      }
+    },
+    {
+      "id": "aleph-alpha/kolibri-1",
+      "name": "Kolibri 1",
+      "context": 1048576,
+      "maxOutput": 943718,
+      "input": ["text"],
+      "efforts": ["none", "low", "medium", "high"],
+      "price": {
+        "munito": { "input": 0.13, "cachedInput": 0.078, "output": 0.51 },
+        "munito-eu": { "input": 0.16, "cachedInput": 0.094, "output": 0.56 }
+      }
+    }
+  ]
+}
