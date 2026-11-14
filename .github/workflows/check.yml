@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  # The API changes with no commit here, so the comparison also runs each day.
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,3 +21,5 @@ jobs:
         run: |
           python3 -m py_compile __init__.py
           python3 -c 'import json; json.load(open("models.json"))'
+      - name: models.json agrees with the Munito AI API
+        run: python3 .github/check_models.py

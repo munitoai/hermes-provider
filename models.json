@@ -43,6 +43,19 @@
       }
     },
     {
+      "id": "munito/deepseek-v4.1-flash-1017-abliterated",
+      "name": "DeepSeek-V4.1-Flash-1017 Abliterated (preview)",
+      "gated": true,
+      "context": 1048576,
+      "maxOutput": 943718,
+      "input": ["text"],
+      "efforts": ["low", "high", "max"],
+      "price": {
+        "munito": { "input": 0.3, "cachedInput": 0.0059, "output": 1.2 },
+        "munito-eu": { "input": 0.33, "cachedInput": 0.0066, "output": 1.4 }
+      }
+    },
+    {
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8-27B",
       "context": 262144,

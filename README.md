@@ -37,6 +37,8 @@ Both use the same key.
 | `aleph-alpha/kolibri-1` | 1,048,576 | Text |
 
 The prices are at [docs.munito.ai/models](https://docs.munito.ai/models).
+A preview model with gated access shows in Hermes only for an organization that has access to it.
+A check in CI compares `models.json` with the Munito AI API each day.
 
 ## Reasoning
 

@@ -79,7 +79,7 @@ class MunitoProfile(ProviderProfile):
             return None
         # The host also lists OCR and decision models, which do not call tools.
         available = set(models)
-        return [model for model in self.fallback_models if model in available]
+        return [model for model in self.model_capabilities if model in available]
 
 
 def munito_profile(provider: str) -> MunitoProfile:
@@ -94,7 +94,8 @@ def munito_profile(provider: str) -> MunitoProfile:
         base_url=host["baseUrl"],
         auth_type="api_key",
         default_aux_model="qwen/qwen3.8-27b",
-        fallback_models=tuple(model["id"] for model in models),
+        # The host lists a gated model only for a key with access, so the list for a failed fetch leaves it out.
+        fallback_models=tuple(model["id"] for model in models if not model.get("gated")),
         supports_prompt_cache_key=True,
         supports_vision_tool_messages=False,
         model_capabilities={
