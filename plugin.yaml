@@ -1,6 +1,6 @@
 name: munito-provider
 kind: model-provider
-version: 0.1.0
+version: 0.1.1
 description: Munito AI as a Hermes model provider - open models for Europe, with the context window and image input of each model declared, a global and an EU host, and reasoning effort sent as the top-level reasoning_effort.
 author: Munito AI
 requires_hermes: ">=0.21.6"
