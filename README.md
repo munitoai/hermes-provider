@@ -32,7 +32,7 @@ Both use the same key.
 |---|---|---|
 | `zai-org/glm-5.3-flash` | 1,048,576 | Text, images |
 | `deepseek-ai/deepseek-v4-flash` | 1,048,576 | Text |
-| `deepseek-ai/deepseek-v4.1-flash-1017` (preview, `munito` only) | 1,048,576 | Text, images |
+| `deepseek-ai/deepseek-v4.1-flash-1017` | 1,048,576 | Text, images |
 | `qwen/qwen3.8-27b` | 262,144 | Text, images |
 | `aleph-alpha/kolibri-1` | 1,048,576 | Text |
 
@@ -50,6 +50,12 @@ The plugin registers two model providers at import, and nothing else.
 Hermes sends the chat requests and the model list request to the host of the provider, with `MUNITO_API_KEY`, through its own client.
 Hermes also sends a `prompt_cache_key`, which keeps a conversation on its prompt cache.
 Hermes shows the cost of each response at the posted prices of `models.json`. A price rule of your organization can lower the price that you pay.
+
+## What it reaches
+
+- **Network:** only the host of the provider that you choose, `api.munito.ai` or `api.eu.munito.ai`. Hermes sends each request through its own client.
+- **Credentials:** only `MUNITO_API_KEY`, which Hermes reads from the active profile. The plugin reads no file and stores nothing.
+- **No telemetry**, no shell commands, no background process, and no self-update.
 
 ## License
 

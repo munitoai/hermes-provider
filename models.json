@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-24",
+  "checked": "2026-11-14",
   "sources": ["https://docs.munito.ai/models", "https://docs.munito.ai/reasoning"],
   "providers": {
     "munito": { "name": "Munito AI", "baseUrl": "https://api.munito.ai/inference/v1" },
@@ -32,13 +32,14 @@
     },
     {
       "id": "deepseek-ai/deepseek-v4.1-flash-1017",
-      "name": "DeepSeek-V4.1-Flash-1017 (preview)",
+      "name": "DeepSeek-V4.1-Flash-1017",
       "context": 1048576,
       "maxOutput": 943718,
       "input": ["text", "image"],
       "efforts": ["low", "high", "max"],
       "price": {
-        "munito": { "input": 0.27, "cachedInput": 0.0054, "output": 1.0 }
+        "munito": { "input": 0.27, "cachedInput": 0.0054, "output": 1.0 },
+        "munito-eu": { "input": 0.3, "cachedInput": 0.006, "output": 1.2 }
       }
     },
     {
